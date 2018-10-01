@@ -42,7 +42,7 @@ public class AppcenterCrashesPlugin implements MethodCallHandler {
           public void accept(Boolean enabled) {
             result.success(enabled.booleanValue());
           }
-        });
+          });
 
         break;
       case "setEnabled":
