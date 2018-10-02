@@ -8,7 +8,7 @@ class AppCenter {
 
   /// Starts App Center services
   static Future<String> configure(String app_secret) async {
-    Future<String> result =
+    final Future<String> result =
         await _channel.invokeMethod('configure', <String, dynamic>{
       'app_secret': app_secret,
     });
@@ -16,18 +16,18 @@ class AppCenter {
   }
 
   static Future<String> start(String app_secret, List<String> services) async {
-    Future<String> result = await _channel.invokeMethod('start',
+    final Future<String> result = await _channel.invokeMethod('start',
         <String, dynamic>{'app_secret': app_secret, 'services': services});
     return result;
   }
 
   static Future<String> get installId async {
-    Future<String> result = await _channel.invokeMethod('installId');
+    final Future<String> result = await _channel.invokeMethod('installId');
     return result;
   }
 
   static Future<bool> get isEnabled async {
-    Future<bool> result = await _channel.invokeMethod('isEnabled');
+    final Future<bool> result = await _channel.invokeMethod('isEnabled');
     return result;
   }
 

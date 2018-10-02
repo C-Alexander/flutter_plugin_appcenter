@@ -13,7 +13,7 @@ class AppCenterAnalytics {
       'aloisdeniel.github.com/flutter_plugin_appcenter/appcenter_analytics');
 
   static Future<bool> get isEnabled async {
-    Future<bool> result = await _channel.invokeMethod('isEnabled');
+    final Future<bool> result = await _channel.invokeMethod('isEnabled');
     return result;
   }
 
