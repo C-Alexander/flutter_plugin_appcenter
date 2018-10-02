@@ -16,7 +16,8 @@ A new flutter plugin project.
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.dependency 'AppCenter/Analytics'
-  
+  s.static_framework = true
+
   s.ios.deployment_target = '8.0'
 end
 
